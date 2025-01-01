@@ -1,0 +1,40 @@
+/* Chromatic aberration effect */
+.chromatic-text {
+  position: relative;
+  color: white;
+  text-shadow: 
+    -2px -2px 0 rgba(255, 0, 0, 0.7),
+    2px 2px 0 rgba(0, 255, 255, 0.7);
+  animation: chromaticMove 4s ease infinite;
+}
+
+@keyframes chromaticMove {
+  0% { text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.7), 2px 2px 0 rgba(0, 255, 255, 0.7); }
+  50% { text-shadow: -3px -1px 0 rgba(255, 0, 0, 0.7), 3px 1px 0 rgba(0, 255, 255, 0.7); }
+  100% { text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.7), 2px 2px 0 rgba(0, 255, 255, 0.7); }
+}
+
+/* Constellation background */
+.constellation-bg {
+  background-color: black;
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+  background-size: 550px 550px, 350px 350px, 250px 250px;
+  background-position: 0 0, 40px 60px, 130px 270px;
+  animation: starsMove 120s linear infinite;
+}
+
+@keyframes starsMove {
+  from { background-position: 0 0, 40px 60px, 130px 270px; }
+  to { background-position: 550px 550px, 390px 410px, 380px 520px; }
+}
+
+/* Glassy UI elements */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
